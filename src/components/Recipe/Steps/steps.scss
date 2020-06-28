@@ -1,0 +1,28 @@
+@import 'src/styles/vars';
+
+.steps {
+  margin-top: 3rem;
+  background-color: lighten($titleBackground, 4);
+  border-radius: 0.1rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  flex: 1 0 50%;
+  counter-reset: step;
+  line-height: 150%;
+
+  .step {
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid $colWhite;
+
+    &::before {
+      content: counter(step, decimal);
+      counter-increment: step;
+      color: $mainColor;
+      padding-right: 1.5rem;
+    }
+  }
+}

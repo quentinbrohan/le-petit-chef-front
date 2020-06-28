@@ -1,0 +1,26 @@
+// import du fichier de variable
+@import 'src/styles/vars';
+
+.ingredients {
+  margin-top: 3rem;
+  margin-bottom: 1.5em;
+  flex: 1 0 10%;
+
+  .ingredient {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid $titleBackground;
+  line-height: 150%;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .quantity {
+      background-color: $mainColor;
+      color: $colWhite;
+      padding: 0.25rem 1rem;
+      border-radius: 0.1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

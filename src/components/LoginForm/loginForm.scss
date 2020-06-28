@@ -1,0 +1,29 @@
+@import 'src/styles/vars';
+
+
+.login-form {
+  width: 50%;
+}
+.login-form-element {
+  display: flex;
+  align-items: center;
+}
+.login-form-message {
+  text-align: right;
+  margin: 0.25rem 1rem;
+}
+.login-form-logged {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.login-form-button {
+  font-weight: 700;
+  font-size: 1rem;
+  color: $colWhite;
+  background-color: $mainColor;
+  border-radius: 0.1rem;
+  border: 0;
+  padding: .5em;
+  height: 2em;
+}
