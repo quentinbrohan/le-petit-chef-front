@@ -7,14 +7,26 @@ import classNames from 'classnames';
 import { slugifyTitle } from 'src/utils';
 
 const RecipeSmall = ({
+  id,
   title,
   thumbnail,
   difficulty,
   isFavorite,
+  addFavorite,
+  removeFavorite,
 }) => {
   const cssClass = classNames('recipe-small', {
     'recipe-small--is-favorite': isFavorite,
   });
+
+  const handleSubmit = (recipeId, recipeIsFavorite) => {
+    if (recipeIsFavorite) {
+      removeFavorite(recipeId);
+    }
+    else {
+      addFavorite(recipeId);
+    }
+  };
 
   return (
     <article className={cssClass}>
@@ -32,7 +44,10 @@ const RecipeSmall = ({
             Voir la recette
           </Link>
           <div className="icon">
-            <Heart className={isFavorite ? 'favorite' : ''} />
+            <Heart
+              className={isFavorite ? 'favorite' : ''}
+              onClick={() => handleSubmit(id, isFavorite)}
+            />
           </div>
         </div>
       </div>
@@ -42,10 +57,13 @@ const RecipeSmall = ({
 };
 
 RecipeSmall.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   difficulty: PropTypes.string.isRequired,
   isFavorite: PropTypes.bool.isRequired,
+  addFavorite: PropTypes.func.isRequired,
+  removeFavorite: PropTypes.func.isRequired,
 };
 
 export default RecipeSmall;

@@ -11,12 +11,14 @@ Après copie des repos, dans leur dossier respectif:
 
 Front:
 ```
+yarn
 yarn start
 ```
 > [Ouvre la page localhost:8080](http://localhost:8080/)
 
 [Back (lien repo)](https://github.com/quentinbrohan/le-petit-chef-back):
 ```
+yarn
 yarn start
 ```
 
