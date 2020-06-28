@@ -5,6 +5,7 @@ import LoginForm from 'src/components/LoginForm';
 import { updateUserField, logIn, logOut } from 'src/actions/user';
 
 const mapStateToProps = (state) => ({
+  username: state.user.info.username,
   email: state.user.email,
   password: state.user.password,
   isLogged: state.user.isLogged,

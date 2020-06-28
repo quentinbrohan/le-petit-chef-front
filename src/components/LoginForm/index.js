@@ -7,13 +7,14 @@ import Field from './Field';
 import './loginForm.scss';
 
 const LoginForm = ({
+  username,
   email,
   password,
   changeField,
   handleLogin,
   handleLogout,
   isLogged,
-  loggedMessage,
+  // loggedMessage,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -25,7 +26,7 @@ const LoginForm = ({
       {isLogged && (
         <div className="login-form-logged">
           <p className="login-form-message">
-            {loggedMessage}
+            {`Hell-O ${username}`}
           </p>
           <button
             type="button"
@@ -65,18 +66,20 @@ const LoginForm = ({
 };
 
 LoginForm.propTypes = {
+  username: PropTypes.string,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   handleLogin: PropTypes.func.isRequired,
   handleLogout: PropTypes.func.isRequired,
   isLogged: PropTypes.bool,
-  loggedMessage: PropTypes.string,
+  // loggedMessage: PropTypes.string,
 };
 
 LoginForm.defaultProps = {
   isLogged: false,
-  loggedMessage: 'Connecté',
+  // loggedMessage: '`Connecté',
+  username: '',
 };
 
 export default LoginForm;
