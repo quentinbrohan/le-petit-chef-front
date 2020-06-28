@@ -1,6 +1,6 @@
 # Le Petit Chef
 
-Site de recette utilisant React, Redux, React Router. Fetch des datas via Axios.
+Site de recettes utilisant React, Redux, React Router. Fetch des datas via Axios.
 Tests avec Chai/Enzyme.
 
 ![](screenshot.png)
