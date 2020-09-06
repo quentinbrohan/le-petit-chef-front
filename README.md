@@ -1,28 +1,28 @@
 # Le Petit Chef
 
-Site de recettes utilisant React, Redux, React Router. Fetch des datas via Axios.
-Tests avec Chai/Enzyme.
+Recipies website using React, Redux for front and fetching data from a Node API server.
+Few tests with Chai and Enzyme.
 
 ![](screenshot.png)
 
 
-## Lancement
-Après copie des repos, dans leur dossier respectif:
+## Launch
+Clone both front and back repos, then in each specific folder:
 
 Front:
 ```
 yarn
 yarn start
 ```
-> [Ouvre la page localhost:8080](http://localhost:8080/)
+> [Open page localhost:8080](http://localhost:8080/)
 
-[Back (lien repo)](https://github.com/quentinbrohan/le-petit-chef-back):
+[Back (repo link)](https://github.com/quentinbrohan/le-petit-chef-back):
 ```
 yarn
 yarn start
 ```
 
-## Connexion
+## Login
 
 Mail / Password
 ```
